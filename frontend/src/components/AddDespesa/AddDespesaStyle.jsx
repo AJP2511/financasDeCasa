@@ -31,3 +31,7 @@ export const OutputMonthContainer = styled.div`
     padding: 1rem 0.5rem;
   }
 `;
+
+export const ResumoContainer = styled.div`
+  padding: 1rem;
+`;

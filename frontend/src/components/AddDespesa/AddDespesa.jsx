@@ -7,6 +7,7 @@ import {
   MainContainer,
   MonthsContainer,
   OutputMonthContainer,
+  ResumoContainer,
 } from "./AddDespesaStyle";
 import ResumoGeral from "../ResumoGeral/ResumoGeral";
 
@@ -34,9 +35,9 @@ const AddDespesa = ({ data, getAllData, getSingleData, singleData }) => {
             </OutputMonthContainer>
           ))}
       </MonthsContainer>
-      <div>
+      <ResumoContainer>
         <ResumoGeral data={singleData} />
-      </div>
+      </ResumoContainer>
     </MainContainer>
   );
 };
