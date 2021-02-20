@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const MainSection = styled.section`
-  width: 130px;
   color: #333;
   background-color: #eef36a;
   border-bottom-right-radius: 10px;

@@ -6,7 +6,6 @@ import Conteudo from "./components/Conteudo/Conteudo";
 import Footer from "./components/Footer/Footer";
 import { Switch, Route } from "react-router-dom";
 import AddData from "./components/AddData/AddData";
-import ResumoGeral from "./components/ResumoGeral/ResumoGeral";
 import AddDespesa from "./components/AddDespesa/AddDespesa";
 
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
           <Route path="/" exact children={<Conteudo />} />
           <Route path="/add" children={<AddData />} />
           <Route path="/addDespesa" children={<AddDespesa />} />
-          <Route path="/resumo" children={<ResumoGeral />} />
         </Switch>
       </BodyContainer>
       <Footer />

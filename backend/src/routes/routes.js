@@ -11,11 +11,21 @@ routes.get("/", async (req, res) => {
   }
 });
 
+routes.get("/:id", async (req, res) => {
+  try {
+    const dados = await Conta.findById(req.params.id);
+
+    return res.json(dados);
+  } catch (err) {
+    return res.status(400).send({ erro: "Erro ao coletar dados do servidor" });
+  }
+});
+
 routes.post("/", async (req, res) => {
   try {
     const dado = await Conta.create(req.body);
 
-    return res.status(200).send({msg: 'Dado adicionado com sucesso'});
+    return res.status(200).send({ msg: "Dado adicionado com sucesso" });
   } catch (err) {
     return res.status(400).send({ erro: "Erro ao criar dado." });
   }
