@@ -1,12 +1,16 @@
 import React from "react";
-import { Table, CabecalhoTable } from "./ResumoGeralStyle";
+import { Table, CabecalhoTable, SpecialTh } from "./ResumoGeralStyle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const ResumoGeral = ({ data }) => {
   return (
     <Table>
       <thead>
         <CabecalhoTable>
-          <th>Despesa</th>
+          <SpecialTh>
+            Despesa <FontAwesomeIcon icon={faPlus} />
+          </SpecialTh>
           <th>Valor</th>
         </CabecalhoTable>
       </thead>

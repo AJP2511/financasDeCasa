@@ -21,3 +21,11 @@ export const Table = styled.table`
 export const CabecalhoTable = styled.tr`
   background-color: #009ddc;
 `;
+
+export const SpecialTh = styled.th`
+  svg {
+    display: inline;
+    color: green;
+    cursor: pointer;
+  }
+`;
