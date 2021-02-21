@@ -41,7 +41,7 @@ routes.post("/:id", async (req, res) => {
 
     const dadoSalvo = await dadoSelecionado.save();
 
-    return res.json(dadoSalvo);
+    return res.send();
   } catch (err) {
     return res.status(400).send({ erro: "Erro ao inserir nova despesa" });
   }

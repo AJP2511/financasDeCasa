@@ -2,7 +2,10 @@ import {
   COLLECT_ALL_DATA,
   ADD_MONTH,
   COLLECT_SINGLE_DATA,
+  ADD_NEW_DESPESA,
+  MODAL_ACTION,
 } from "./Action.types";
+
 import axios from "axios";
 
 const baseUrl = "http://localhost:3003/financas";
@@ -39,5 +42,26 @@ export const getSingleData = (id) => {
   return {
     type: COLLECT_SINGLE_DATA,
     payload: request,
+  };
+};
+
+export const addNewDespesa = (data, id) => {
+  const request = axios({
+    method: "POST",
+    url: `${baseUrl}/${id}`,
+    data: data,
+    headers: { "Content-type": "application/Json" },
+  });
+
+  return {
+    type: ADD_NEW_DESPESA,
+    payload: request,
+  };
+};
+
+export const modalAction = (newValue) => {
+  return {
+    type: MODAL_ACTION,
+    payload: newValue,
   };
 };

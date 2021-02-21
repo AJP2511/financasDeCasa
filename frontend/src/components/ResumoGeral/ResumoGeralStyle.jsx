@@ -7,9 +7,12 @@ export const Table = styled.table`
   font-size: 1.3rem;
 
   tr,
-  td,
-  th {
+  td {
     border: 1px solid black;
+    padding: 0.5rem;
+  }
+
+  th {
     padding: 0.5rem;
   }
 
@@ -23,9 +26,12 @@ export const CabecalhoTable = styled.tr`
 `;
 
 export const SpecialTh = styled.th`
+  display: grid;
+  grid-template-columns: 90% 10%;
+
   svg {
-    display: inline;
-    color: green;
+    margin: 0 auto;
+    color: #fe9920;
     cursor: pointer;
   }
 `;

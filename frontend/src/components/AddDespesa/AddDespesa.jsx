@@ -12,12 +12,15 @@ import {
 import ResumoGeral from "../ResumoGeral/ResumoGeral";
 
 const AddDespesa = ({ data, getAllData, getSingleData, singleData }) => {
+  const [search, setSearch] = React.useState(false);
+
   useEffect(() => {
     getAllData();
   }, []);
 
   const handleClick = ({ target }) => {
     getSingleData(target.id);
+    setSearch(true);
   };
 
   return (
@@ -36,7 +39,7 @@ const AddDespesa = ({ data, getAllData, getSingleData, singleData }) => {
           ))}
       </MonthsContainer>
       <ResumoContainer>
-        <ResumoGeral data={singleData} />
+        {search && <ResumoGeral data={singleData} />}
       </ResumoContainer>
     </MainContainer>
   );

@@ -1,3 +1,5 @@
 export const COLLECT_ALL_DATA = "COLLECT_ALL_DATA";
 export const ADD_MONTH = "ADD_MONTH";
 export const COLLECT_SINGLE_DATA = "COLLECT_SINGLE_DATA";
+export const ADD_NEW_DESPESA = "ADD_NEW_DESPESA";
+export const MODAL_ACTION = "MODAL_ACTION";
